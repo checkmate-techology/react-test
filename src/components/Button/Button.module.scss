@@ -1,0 +1,144 @@
+@use './../../styles/mixins' as *;
+
+.root {
+  @include button;
+
+  .icon {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+  }
+
+  &Small {
+    height: 3.5rem;
+    padding: 0 1.5rem;
+  }
+
+  &--primary {
+    background-color: $brand-color;
+    color: $white;
+
+    @include pseudo-states() {
+      background-color: $brand-color-dark;
+    }
+  }
+
+  &--secondary {
+    background-color: $base-grey-5;
+    color: $base-grey-90;
+    border: 1px solid $base-grey-10;
+
+    @include pseudo-states() {
+      background-color: $brand-color-dark;
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $base-grey-10;
+      color: $base-grey-25;
+      cursor: not-allowed;
+  
+      @include pseudo-states() {
+        color: $base-grey-25;
+        background-color: $base-grey-10;
+      }
+    }
+  }
+
+  &--secondary-reverse {
+    background-color: $white;
+    color: $base-grey-90;
+    border: 1px solid $base-grey-10;
+
+    @include pseudo-states() {
+      background-color: $brand-color-dark;
+      color: $white;
+    }
+
+    &:disabled {
+      color: $base-grey-25;
+      background-color: $base-grey-10;
+
+      @include pseudo-states() {
+        color: $base-grey-25;
+        background-color: $base-grey-10;
+      }
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    border: none;
+    color: $brand-color;
+    padding: 0;
+    font-weight: 500;
+
+    @include pseudo-states() {
+      color: $brand-color-dark;
+      background-color: transparent;
+    }
+  }
+
+  &--outline {
+    background-color: $white;
+    color: $brand-color;
+    border: 1px solid $brand-color;
+
+    @include pseudo-states() {
+      background-color: $brand-color-dark;
+      color: $white;
+      border: 1px solid $brand-color-dark;
+    }
+
+    &:disabled {
+      color: $base-grey-25;
+      background-color: $base-grey-10;
+
+      @include pseudo-states() {
+        color: $base-grey-25;
+        background-color: $base-grey-10;
+      }
+    }
+  }
+
+  &--success {
+    background-color: $green;
+    border: none;
+    color: $white;
+
+    @include pseudo-states() {
+      color: $white;
+      background-color: $green-150;
+    }
+  }
+
+  &--delete {
+    background-color: $status-error;
+    border: none;
+    color: $white;
+
+    @include pseudo-states() {
+      color: $white;
+      background-color: $status-error-secondary;
+
+      &:disabled {
+        background-color: $status-error;
+      }
+    }
+  }
+
+  &--warn {
+    background-color: $info-color;
+    border: none;
+    color: $white;
+
+    @include pseudo-states() {
+      color: $white;
+      background-color: $status-pending-secondary;
+
+      &:disabled {
+        background-color: $info-color;
+      }
+    }
+  }
+}

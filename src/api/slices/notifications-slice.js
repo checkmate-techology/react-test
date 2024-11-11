@@ -6,18 +6,15 @@ const notificationsSlice = createSlice({
   name: 'notifications',
   initialState,
   reducers: {
-    messagePopOut(state) {
-      state.message.show = false;
-    },
-    messagePopUp(state, { payload }) {
-      state.message = {...payload, show: true}
+    addNotification(state, { payload }) {
+      // @TODO
     }
   },
   extraReducers: (builder) => {}
 });
 
 
-export const { messagePopOut, messagePopUp } = notificationsSlice.actions
+export const { addNotification } = notificationsSlice.actions
 
 export const selectNotifications = (state) => state.notifications;
 

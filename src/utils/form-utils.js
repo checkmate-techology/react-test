@@ -1,0 +1,1 @@
+export const ChangeEvent = (name, value) => ({ target: { name, value }})

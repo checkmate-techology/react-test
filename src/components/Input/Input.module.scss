@@ -1,0 +1,62 @@
+@use './../../styles/mixins' as *;
+
+.root {
+  position: relative;
+
+  &WithError {
+    padding-bottom: 1.5rem;
+  }
+
+  .icon {
+    position: absolute;
+    color: $secondary-text-color;
+    top: 2rem;
+    margin-top: calc(-1.8rem / 2);
+    margin-left: calc(1.5rem - 1.8rem / 2);
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .input {
+    @include input;
+
+    &WithIcon { padding-left: 3rem; }
+  }
+  
+  .showPassword {
+    font-size: 1.2rem;
+    position: absolute;
+    right: .7rem;
+    line-height: 1.2rem;
+    top: 1.5rem;
+  }
+
+  .error {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    color: $error-color;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+
+    &::before {
+      content: '* ';
+    }
+  }
+
+  .actionButton {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    background-color: $base-grey-5;
+    width: 40px;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid $base-grey-10;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: $base-grey-90;
+    cursor: pointer;
+  }
+}

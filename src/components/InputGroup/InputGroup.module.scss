@@ -1,0 +1,58 @@
+@use './../../styles/mixins' as *;
+
+.root { 
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+
+  .title {
+    display: flex;
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: .7em;
+
+    &NoMargin {
+      margin-bottom: 0;
+    }
+
+    &Strong {
+      font-weight: 600;
+      font-size: 1.4em;
+      color: $base-grey;
+    }
+
+    &Error {
+      color: $error-color;
+    }
+
+    .tooltip {
+      display: flex;
+      align-items: center;
+      
+      svg {
+        color: $base-grey-35;
+        height: 17px;
+        margin-left: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &Inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .7em;
+
+    .input {
+      width: 30em;
+    }
+
+    .title {
+      @include text-body;
+      margin-bottom: 0;
+      color: $base-grey;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@use './../../styles/mixins' as *;
+
+.root {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  input { display: none; }
+}
+
+.menu {
+  position: absolute;
+  display: none;
+  background-color: $white;
+  min-width: 100%;
+  max-width: 50rem;
+  z-index: 99;
+  padding: 0;
+  box-shadow: 0px 6px 10px 0px #00000033;
+  border-radius: 6px;
+
+  &Visible { display: block }
+
+  .item {
+    @include text-body;
+    list-style: none;
+    padding-inline-start: 0;
+    padding: 1.2rem;
+
+    &:hover { background-color: $base-grey-10; }
+
+    &Hidden { display: none }
+  }
+
+  .search {
+    position: relative;
+    padding: 5px 9px;
+  
+    .icon {
+      position: absolute;
+      color: $secondary-text-color;
+      top: 50%;
+      margin-top: calc(-1.8rem / 2);
+      margin-left: calc(1.5rem - 1.8rem / 2);
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+  
+    .input {
+      @include input;
+      display: block !important;
+      padding-left: 3rem;
+    }
+  }
+
+  ul {
+    overflow-y: scroll;
+    max-height: 20rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .itemDescription {
+    white-space: nowrap;
+    color: $base-grey-50;
+    font-size: 1rem;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+}
+
+.button {
+  @include input;
+  line-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid $base-grey;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+
+  &.disabled {
+    span { color: $base-grey-35; }
+
+    &::after {
+      border-top-color: $base-grey-35;
+    }
+  }
+}
+
+.placeholder {
+  color: $base-grey-50;
+}
