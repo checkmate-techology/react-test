@@ -1,0 +1,37 @@
+@import './colors';
+
+// Text colors
+$primary-text-color:    $brand-primary-200;
+$secondary-text-color:  $brand-primary-160;
+
+// Grey border
+$grey-border: 1px solid $base-grey-10;
+
+// Background
+$background-gradient: linear-gradient(270.31deg, #9C62F0 -0.04%, #7A48DF 71.54%);
+$background-secondary: $base-grey-5;
+
+// Modal
+$overlay-color:                #33373bf2;
+
+// Colors
+$error-color:             $red;
+$error-color-light:       $red-20;
+$error-color-background:  #e57273;
+$success-color:           $green;
+$success-color-light:     $green-10;
+$info-color:              $yellow;
+$info-color-light:        $yellow-20;
+
+
+// Margins
+$margin-small:   7px;
+$margin-default: 15px;
+$margin-large:   30px; 
+
+// Sizes
+$x-small-size: 300px;
+$small-size:   500px;
+$medium-size: 1000px;
+$large-size:  1500px;
+
