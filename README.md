@@ -1,4 +1,4 @@
-# Fron-end Developer task 
+# Front-end Developer task 
 
 This project is a short task meant to see how you, given a design, interact with the React project to get the expected result.
 
