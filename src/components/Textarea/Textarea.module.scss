@@ -1,0 +1,8 @@
+@use 'styles/mixins' as *;
+
+.root {
+  @include input;
+  height: initial;
+  padding: 1.2rem;
+  resize: none;
+}

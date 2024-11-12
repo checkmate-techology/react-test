@@ -1,6 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const initialState = [ 
+  { 
+    user: 'Brian',
+    type: 'info',
+    message: 'message',
+    time: '2024-11-11 22:15:01'
+  }
+];
 
 const notificationsSlice = createSlice({
   name: 'notifications',

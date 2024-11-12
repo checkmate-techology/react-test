@@ -5,25 +5,6 @@
   background-color: $background-secondary !important;
 }
 
-.text-secondary {
-  color: $base-grey-50;
-}
-
-.text-color-primary {
-  color: $brand-primary-160 !important;
-}
-
-.position-relative {
-  position: relative;
-}
-
-/***** PORTVIEW *****/
-.u-min-width {
-  &-small  { min-width: 300px;  }
-  &-medium { min-width: 500px;  }
-  &-large  { min-width: 1000px; }
-}
-
 .u-width-100 {
   width: 100% !important;
 }
@@ -42,29 +23,12 @@
 .u-width-75 {
   width: 75% !important;
 }
+
 .u-height-100 {
   height: 100% !important;
 }
-.u-max-width-content {
-  padding-left: 7%;
-  padding-right: 7%;
-}
-.u-width{
-  &-x-small { width: $x-small-size; }
-  &-small   { width: $small-size; }
-}
-
 .u-height-100-vh {
   min-height: 100vh;
-}
-
-@media screen and (min-width: 1280px){
-  .u-max-width-content {
-    max-width: 1280px !important;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .u-padding {
@@ -135,15 +99,6 @@
 }
 
 /***** TEXT *****/
-.u-capitalize{
-  text-transform: capitalize;
-}
-.u-uppercase {
-  text-transform: uppercase;
-}
-.u-bold {
-  font-weight: 600;
-}
 .u-text-centered {
   text-align: center;
 }
@@ -155,26 +110,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.u-font-weight-200 {
-  font-weight: 200;
-}
-.u-font-weight-400 {
-  font-weight: 400;
-}
-.u-font-weight-600 {
-  font-weight: 600;
-}
-.u-font-weight-800 {
-  font-weight: 800;
-}
 
-.d-block {
-  display: block;
-}
-
-.d-inline-block {
-  display: inline-block;
-}
 
 /***** FLEXBOX *****/
 .gap-1 {
